@@ -1,7 +1,9 @@
 <img align="right" src="https://github.com/ishaanjav/Kairos_Face_Recognition/blob/master/Identification.gif" width="300">
 
 # Kairos_Face_Recognition
-**The purpose of this Android app is to use Kairos's SDK for Android in order to implement facial recognition. Kairos's API offers one of the simplest methods to integrate such features into any Android app.** Features of this app include: 
+**The purpose of this Android app is to use Kairos's SDK for Android in order to implement facial recognition. Kairos's API offers one of the simplest methods to integrate such features into any Android app.** 
+
+Features of this app include: 
 - Registering users given their image and name.
 - Identifying users when given their image.
 
