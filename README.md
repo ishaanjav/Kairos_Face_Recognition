@@ -51,3 +51,21 @@ Upon getting the free trial, you can log into Kairos's website at [this link](ht
 
 ###### **Please note that if you are using the free trial, you will only receive one API Key and one App ID. What this means is that since you are on a free trial, you will only be able to use the Kairos API in one app. For [Kairos's Pricing Plans](https://www.kairos.com/pricing), you can check out [this link](https://www.kairos.com/pricing) which has plans starting at $99 per month and $0.02 per transaction. *Custom plans are available upon request.*** 
 
+### Using the API Key in the app
+Now that you have received the API Key and App ID, you simply have to change 2 lines of code to use the app. **If you go to `MainActivity.java`, you should see the following lines of code above `onCreate`:**
+
+    //IMPORTANT ------------------------------------------------------------------------------
+    //Replace the following with the ID and Key provided to you at the Kairos API Dashboard - https://developer.kairos.com/admin
+    //For more information about getting the free trial and API Key, you can read my repository's GitHub README at the following link -
+    //https://github.com/ishaanjav/Kairos_Face_Recognition/blob/master/README.md
+    
+    String app_id = "<YOUR APP ID COMES HERE>";
+    String api_key = "<YOUR API KEY COMES HERE>";
+    
+    //IMPORTANT ------------------------------------------------------------------------------
+Replace `app_id`'s value of `<YOUR APP ID COMES HERE>` with the App ID that you got from the [API Dashboard](https://developer.kairos.com/admin). Then, replace `<YOUR API KEY COMES HERE>`with the API Key from the [API Dashboard](https://developer.kairos.com/admin). Below is an example of what those two lines of code should look like now:
+    
+    //Please note that this is just an example and you will have to substitute the example with your own API Key and App ID.
+    String app_id = "1111111a";
+    String api_key = "123456789abcdefghij123456abcdefg";
+    
