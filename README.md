@@ -1,5 +1,5 @@
 
-<img align="right" src="https://github.com/ishaanjav/Kairos_Face_Recognition/blob/master/Identification.gif" width="311">
+<img align="right" src="https://github.com/ishaanjav/Kairos_Face_Recognition/blob/master/Identification.gif" width="315">
 
 # Kairos_Face_Recognition
 
@@ -11,14 +11,24 @@ Features of this app include:
 
 You can view more about the features of Kairos's API [on their website](https://www.kairos.com/features). They used to have a GitHub repository with their Android SDK where it contained information about using Kairos in Android, however it seems like they removed that repository. You can find the equivalent information below.
 
+<br/>
+<br/>
+<br/>
+
 -----
 
+<img align="left" src="https://github.com/ishaanjav/Kairos_Face_Recognition/blob/master/Full%20Process.gif" width="311">
+
 ## Usage:
+
 **Please note that in order to use this app, you MUST get the API Key and App ID from the [Kairos API Dashboard](https://developer.kairos.com/admin). In the Setup section, you will find the steps on how to request a free trial of the API and use it in the app**.
 
-The app consists of two buttons and an `EditText`. The two buttons are used for the enrollment and recognition processes.
-- **Enrollment Process:** The `EditText` is used to enter the name of the person being enrolled. The `Enroll` button is then used to launch the camera and register the person along with an image of their face.
-- **Identification Process:** The `Identify` button is used to launch the camera and identify the person in the image. It uses the Kairos API to output the matching result of the person. If it can't identify the user, then it returns an empty String.
+
+The app consists of two buttons, an `EditText` and an `ImageView`. The two buttons are used for the **enrollment and recognition processes** by taking a picture of a person. That picture is then displayed in an `ImageView`.
+- **Enrollment Process:** The `EditText` is used to enter the name of the person being enrolled. The `Enroll` button is then used to launch the camera and register the person with their name along with the image of their face.
+- **Identification Process:** The `Identify` button is used to launch the camera and identify the person in the image. It uses the Kairos API to output the result of the person with the closest matching face. If it can't identify the person, then it returns an empty `String`.
+
+<br/>
 
 -----
 ## Setup
