@@ -1,7 +1,7 @@
 
 <img align="right" src="https://github.com/ishaanjav/Kairos_Face_Recognition/blob/master/Identification.gif" width="315">
 
-# Kairos_Face_Recognition
+# Kairos Face Recognition
 
 **The purpose of this Android app is to use Kairos's SDK for Android in order to implement facial recognition. Kairos's API offers one of the simplest methods to integrate such features into any Android app.** 
 
@@ -56,9 +56,8 @@ Now that you have received the API Key and App ID, you simply have to change 2 l
 
     //IMPORTANT ------------------------------------------------------------------------------
     //Replace the following with the ID and Key provided to you at the Kairos API Dashboard - https://developer.kairos.com/admin
-    //For more information about getting the free trial and API Key, you can read my repository's GitHub README at the following link -
-    //https://github.com/ishaanjav/Kairos_Face_Recognition/blob/master/README.md
-    
+    //...
+      
     String app_id = "<YOUR APP ID COMES HERE>";
     String api_key = "<YOUR API KEY COMES HERE>";
     
@@ -69,3 +68,66 @@ Replace `app_id`'s value of `<YOUR APP ID COMES HERE>` with the App ID that you 
     String app_id = "1111111a";
     String api_key = "123456789abcdefghij123456abcdefg";
     
+ -----
+ # Additional Information
+As I stated at the beginning of the `README`, it looks like Kairos has removed their information about using their SDK for Android. However, **below you can find an explanation of the code that comes from Kairos's Android SDK to understand what is happening and perhaps put it to your own uses.**
+
+### Instantiating a `Kairos` Object: 
+The `Kairos` class is used to instantiate a new Kairos object. This object is then used to set authentication of the App ID and API Key as well as call methods such as `recognize` and `enroll`. Below is the relevant code:
+ 
+    //Instantiate a Kairos instance
+    Kairos myKairos = new Kairos();
+    
+    //Set Authentication
+    myKairos.setAuthentication(MainActivity.this, app_id, api_key);
+
+### Creating a Kairos Listener:
+The `KairosListener` is used to create an `Object` that is passed in to the `recognize` and `enroll` functions, the reason being that is has two methods that can be overriden as shown below:
+  
+    Kairos identificationListener = new KairosListener() {
+        @Override
+        public void onSuccess(String response) {
+            //The process was successful.
+        }
+
+        @Override
+        public void onFail(String response) {
+            //There was an error while doing the process.
+        }
+    };
+
+### Recognizing and Enrolling Faces
+The `Kairos` class has two methods called `recognize` and `enroll` that recognize and enroll faces, respectively. Below is an example of how to use the two methods:
+
+    //Enrolling a face
+    myKairos.enroll(bitmapImage,
+                    nameOfPerson,
+                    galleryName,
+                    selector,
+                    multipleFaces,
+                    minHeadScale,
+                    kairosListener);
+                    
+    //Identifying a face
+    myKairos.recognize(bitmapImage,
+                galleryName,
+                selector,
+                null,
+                minHeadScale,
+                null,
+                kairosListener);
+##### When doing `myKairos.recognize`, the `kairosListener` Object will receive a String structured as a JSON in its `onSucess` method as a result of recognizing a face. In order to get the name of the identified person from the JSON, you can look at a function I made in [`MainActivity.java`](https://github.com/ishaanjav/Kairos_Face_Recognition/blob/master/app/src/main/java/com/example/anany/kairosfacerecognition/MainActivity.java) called `readJSONForName()` which accepts the JSON String and returns back a String containing solely the name.  
+
+As can be seen above, the main parameters that the methods require are a `Bitmap` of the person's face, their name *(when enrolling)*, and a `KairosListener`. *The other parameters can be null*. As explained in the section above, the `KairosListener` can be used to see whether the task was successful, or whether it failed and its methods can be overriden so that a `Toast` is displayed based on the results of the processes.
+
+-----
+# Conclusion
+If you have any questions or issues regarding using the Kairos Face Recognition app, you can contact me at ishaanjav@gmail.com or by raising an issue for this repository. Once you have cloned this repository, feel free to make any changes to the app as you wish. After reading the Additional Information section above, you should have an idea of how the recognition and identification processes work. 
+
+If you enjoyed using and testing this app, or feel that you have learned useful information from it, don't be afraid to give it a star. Furthermore, you may also want to check out some of my other repositories for Android apps:
+
+- **[Face Analyzer](https://github.com/ishaanjav/Face_Analyzer)** - This app uses the Microsoft Face API to detect faces in an image and then, for each face detected it generates a thumbnail of that face and displays it in a `ListView` along with relevant information about the face's facial features including *but not limited to*: Estimated Age, Gender, Emotions, Head Positions, and Facial Hair. **[README](https://github.com/ishaanjav/Face_Analyzer/blob/master/README.md)**
+- **[Fingerprint Authentication](https://github.com/ishaanjav/Fingerprint_Authentication)** - A simple app that demonstrates how to use a device's fingerprint reader to authenticate a person's finger and identify it among existing fingerprints. **[README](https://github.com/ishaanjav/Fingerprint_Authentication/blob/master/README.md)**
+
+*Please remember that if you are using the Kairos API under a free trial, then you only have 2 weeks to use the API after getting the trial. Afterwards, to use it you have to choose one of Kairos's [pricing plans](https://www.kairos.com/pricing).*
+
