@@ -45,14 +45,14 @@ Unless you already have a Kairos pricing plan that you are paying for, you will 
 To get the free trial, you will have to fill in the required fields to create your account after which you will have to confirm the account through the email that you have provided. **The email that you provide must be a *non-disposable* email, meaning that it cannot end in something like `@gmail.com`.** 
 
 ### Getting the API Key and App ID
-Upon getting the free trial, you can log into Kairos's website at [this link](https://developer.kairos.com/login). You can then access the [API Dashboard](https://developer.kairos.com/admin) at [this link](https://developer.kairos.com/admin) and copy the API Key and App ID which will be used in the app in the following step. You should see something similar to the image below.
+Upon getting the [free trial](#getting-the-kairos-free-trial), you can log into Kairos's website at [this link](https://developer.kairos.com/login). You can then access the [API Dashboard](https://developer.kairos.com/admin) at [this link](https://developer.kairos.com/admin) and copy the API Key and App ID which will be used in the app in the following step. You should see something similar to the image below.
 
 <img align="center" src="https://github.com/ishaanjav/Kairos_Face_Recognition/blob/master/API%20Dashboard.PNG" width="900">
 
 ###### **Please note that if you are using the free trial, you will only receive one API Key and one App ID. What this means is that since you are on a free trial, you will only be able to use the Kairos API in one app. For [Kairos's Pricing Plans](https://www.kairos.com/pricing), you can check out [this link](https://www.kairos.com/pricing) which has plans starting at $99 per month and $0.02 per transaction. *Custom plans are available upon request.*** 
 
 ### Using the API Key in the app
-Now that you have received the API Key and App ID, you simply have to change 2 lines of code to use the app. **If you go to `MainActivity.java`, you should see the following lines of code above `onCreate`:**
+Now that you have received the [API Key and App ID](getting-the-api-key-and-app-id), you simply have to change 2 lines of code to use the app. **If you go to `MainActivity.java`, you should see the following lines of code above `onCreate`:**
 
     //IMPORTANT ------------------------------------------------------------------------------
     //Replace the following with the ID and Key provided to you at the Kairos API Dashboard - https://developer.kairos.com/admin
