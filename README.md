@@ -9,7 +9,7 @@ Features of this app include:
 - **Registering users** given their image and name.
 - **Identifying users** when given their image.
 
-You can view more about the features of Kairos's API [on their website](https://www.kairos.com/features). They used to have a GitHub repository with their Android SDK where it contained information about using Kairos in Android, however it seems like they removed that repository. You can find the equivalent information below.
+You can view more about the features of Kairos's API [on their website](https://www.kairos.com/features). They used to have a GitHub repository with their Android SDK where it contained information about using Kairos in Android, however it seems like they removed that repository. You can find the equivalent information below in the **[Additional Information Section](#additional-information).**
 
 <br/>
 <br/>
