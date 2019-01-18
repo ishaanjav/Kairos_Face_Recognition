@@ -52,7 +52,7 @@ Upon getting the [free trial](#getting-the-kairos-free-trial), you can log into 
 ###### **Please note that if you are using the free trial, you will only receive one API Key and one App ID. What this means is that since you are on a free trial, you will only be able to use the Kairos API in one app. For [Kairos's Pricing Plans](https://www.kairos.com/pricing), you can check out [this link](https://www.kairos.com/pricing) which has plans starting at $99 per month and $0.02 per transaction. *Custom plans are available upon request.*** 
 
 ### Using the API Key in the app
-Now that you have received the [API Key and App ID](getting-the-api-key-and-app-id), you simply have to change 2 lines of code to use the app. **If you go to `MainActivity.java`, you should see the following lines of code above `onCreate`:**
+Now that you have received the [API Key and App ID](#getting-the-api-key-and-app-id), you simply have to change 2 lines of code to use the app. **If you go to `MainActivity.java`, you should see the following lines of code above `onCreate`:**
 
     //IMPORTANT ------------------------------------------------------------------------------
     //Replace the following with the ID and Key provided to you at the Kairos API Dashboard - https://developer.kairos.com/admin
