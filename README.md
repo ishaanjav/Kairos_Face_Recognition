@@ -130,7 +130,7 @@ If you enjoyed using and testing this app, or feel that you have learned useful 
 - **[Fingerprint Authentication](https://github.com/ishaanjav/Fingerprint_Authentication)** - A simple app that demonstrates how to use a device's fingerprint reader to authenticate a person's finger and identify it among existing fingerprints. **[README](https://github.com/ishaanjav/Fingerprint_Authentication/blob/master/README.md)**
 
 <p align="center">
-  <img width="550" height="540" src="https://github.com/ishaanjav/Kairos_Face_Recognition/blob/master/Image.jpeg">
+  <img width="500" height="540" src="https://github.com/ishaanjav/Kairos_Face_Recognition/blob/master/Image.jpeg">
 </p>
 
 *Please remember that if you are using the Kairos API under a free trial, then you only have 2 weeks to use the API after getting the trial. Afterwards, to use it you have to choose one of Kairos's [pricing plans](https://www.kairos.com/pricing).*
